@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // const arr = [10, ' 20', 22,'12', '22',22, 44]
+    // function getMax(arr) {
+    //     let max = arr[0]
+    //     arr.forEach(function (elem) {
+    //         // let current = elem
+    //         if (max < elem) {
+    //             max = elem
+    //         }
+    //     })
+    //     return max
+    // }
+
+
+    // const arr = [{value: 10}, {value: 9}, {value: 2}, {value:11}]
+    // let max = arr[0];
+    //
+    // // {value: 10}
+    // // current - 10
+    // // max - {value.10}
+    // // step2:
+    // // max - {value.10}
+    // // current - 9
+    // // max - 9
+    // // step 3
+    // // current - 2
+    // // i
+    // arr.forEach(function(elem) {
+    //   let current = elem
+    //   if (max.value > current.value) {
+    //     max = current
+    //   }
+    // })
+
+
+    // const arr = [[5,4,13,4], [6,1], [55,3,56,23,45,87], [8, 1, 2]]
+    // let min = undefined
+    //
+    // arr.forEach(function(elem) {
+    //   let summ = 0
+    //   elem.forEach(function(current) {
+    //     summ += current
+    //   })
+    //
+    //   if (min === undefined || min > summ)  {
+    //     min = summ
+    //   }
+    // })
+    //
+    // console.log(`minimum:${min}`)
+
+
+    // const arr = [
+    //   [4,2,3,1],
+    //   [5,6,7,2],
+    //   [0,3,5,2],
+    //   [6,5,4,3]
+    // ];
+    // arr.forEach(function(elem, rowNumber){
+    //   let summ = 0
+    //   elem.forEach(function(current, columnNumber){
+    //     summ += current
+    //   })
+    //   if (summ === 10) {
+    //     console.log(rowNumber)
+    //   }
+    // })
+
+
+    // const list = [
+    //   {
+    //     name: 'Andrei',
+    //     info: [
+    //             {
+    //               name: 'Physical condition',
+    //               height: 180,
+    //               weight: 78
+    //             },
+    //             {
+    //               name: 'Mental condition',
+    //               value: true,
+    //             }
+    //     ],
+    //     number: 1
+    //   },
+    //   {
+    //     name: 'Olga',
+    //     info:
+    //             [
+    //               {
+    //                 name: 'Physical condition',
+    //                 height: 156,
+    //                 weight: 50
+    //               },
+    //               {
+    //                 name: 'Mental condition',
+    //                 value: true,
+    //               }
+    //             ],
+    //     number: 2
+    //   },
+    //   {
+    //     name: 'Eva',
+    //     info:
+    //             [
+    //               {
+    //                 name: 'Physical condition',
+    //                 height: 174,
+    //                 weight: 62
+    //               },
+    //               {
+    //                 name: 'Mental condition',
+    //                 value: false,
+    //               }
+    //             ],
+    //     number: 3
+    //   },
+    //   {
+    //     name: 'Linn',
+    //     info:
+    //             [
+    //               {
+    //                 name: 'Physical condition',
+    //                 height: 165,
+    //                 weight: 55
+    //               },
+    //               {
+    //                 name: 'Mental condition',
+    //                 value: false,
+    //               }
+    //             ],
+    //     number: 4
+    //   }
+    // ]
+    //   function getList (data) {
+    //     console.log('Data = ', data)
+    //     let result = [];
+    //     data.forEach(function(current){
+    //           console.log(current)
+    //           let condition = current.info[1].value
+    //           if (condition === false) {
+    //             result.push(current.name)
+    //           }
+    //         })
+    //     return result;
+    //   }
+    //
+    //   console.log(getList(list))
+
+
+    // function getSumm(data) {
+    //   let summ = 0
+    //   data.forEach(function (current) {
+    //     if (current % 2 === 1){
+    //       summ += current;
+    //     }
+    //   })
+    //   return summ;
+    // }
+    //   const arr = [8,4,5,5,4,4,5,2,3,0,3]
+    //
+    // let result = getSumm([8,4,5,5,4,4,5,2,3,0,3]);
+    // console.log(result);
+
+
+    //
+    // const arr2 = [4,5,1,3,0,3]
+    //
+    //
+    // function getSumm2(list){
+    //   let summ2 = 0;
+    //   list.forEach(function (elem, i){
+    //     if (i % 3 === 0){
+    //       summ2 += elem;
+    //     }
+    //   })
+    //   return summ2;
+    // }
+    // let result2 = getSumm2(arr2);
+    // console.log('Result = ', result2);
+    //
+    //
+    // const list = {
+    //     name: 'Arina',
+    //     lastName: 'Shulga'
+    // }
+    // function toString(object){
+    //
+    // }
+    // toString(list)
+
+
+    // function fib(n) {
+    //   return n <= 1 ? n : fib(n - 1) + fib(n - 2)
+    // }
+    //
+    // alert( fib(3) ) // 2
+    // alert( fib(7) ) // 13
+
+
+    //
+    // var date = new Date();
+    // console.log(date instanceof Date && !isNaN(date.valueOf()));
+
+    // function factorialize(num) {
+    //   if (num < 0)
+    //     return -1;
+    //   else if (num === 0)
+    //     return 1;
+    //   else {
+    //     return (num * factorialize(num - 1));
+    //   }
+    // }
+    // // factorialize(5);
+    // console.log(factorialize(5))
+
+
+    // function factorialize(num) {
+    //   var result = 1;
+    //   if (num === 0 || num === 1)
+    //     return 1;
+    //   for (let i = 1; i < num; i++) {
+    //     result = result * i
+    //   }
+    //   return result;
+    // }
+    // // num = 3, result = 1
+    // // i = 1
+    // console.log(factorialize(5))
+
+
+    // в порядке убывания
+    // 58, 33, 165, 234, 2
+    // 165, 33, 58, 234, 2
+    // 234, 33, 58, 165, 2
+    // 234, 33, 58, 165, 2
+    // 234, 58, 33, 165, 2
+    // 234, 165, 33, 58, 2
+    // 234, 165, 33, 58, 2
+    // 234, 165, 58, 33, 2
+    // 234, 165, 58, 33, 2
+    // let arr = [33, 58, 165, 234, 2]
+    // for (let i=0; i < arr.length - 1; i++ ) {
+    //   let maxPos = i
+    //   for (let j=i+1; j < arr.length; j++) {
+    //     console.log(j)
+    //     if (arr[i] < arr[j]) {
+    //       maxPos = j
+    //     }
+    //   }
+    //   let temp = arr[i]
+    //   arr[i] = arr[maxPos]
+    //   arr[maxPos] = temp
+    // }
+    // console.log("Arr: ", arr)
+
+    // 33, 58, 165, 234, 2
+    // 234, 58, 165, 33, 2
+    // 234, 165, 58, 33, 2
+    // 234, 165, 58, 33, 2
+    // 234, 165, 58, 33, 2
+
+
+    // let arr = [33, 58, 165, 234, 2]
+    // let max = arr[0];
+    // arr.forEach(function(elem){
+    //   let current = Number(elem)
+    //   if (max<current) {
+    //     max = current
+    //   }
+    // });
+    // console.log(function(elem))
+
+
+    // let date
+    // date = new Date ()
+    // console.log(date)
+
+
+    // Посчитать сумму диагональных элементов массива nxn (4 строки 4 столбца) при условии что цикл foreach выполнит только 4 шага
+    // const arr = [
+    //   [4,2,3,1],
+    //   [5,6,7,2],
+    //   [0,3,5,2],
+    //   [6,5,4,3]
+    // ]
+    // function returnSumm(arr) {
+    //   let summ = 0
+    //   arr.forEach(function (row, rowNumber, array){
+    //     let array1 = array[rowNumber]
+    //     summ += array1[rowNumber]
+    //   })
+    //   return summ
+    //
+    // }
+    // console.log(returnSumm(arr))
+
+
+    // let list = [1, 2, 4, 5, 6, 7]
+    // function checkFunction(list) {
+    //   if (list.length < 3) {
+    //     return false
+    //   }
+    //   for (let i=0; i <= list.length - 3; i++) {
+    //     if (list[i] + list[i+1] !== list[i+2]) {
+    //       return false
+    //     }
+    //   }
+    //   return true
+    // }
+    // console.log(checkFunction(list));
+
+
+    // Diagonal difference, it won't work
+    //   function diagonalDifference(arr) {
+    //     let result = [0, 0]
+    //     for (let i =0; i < arr.length; i++) {
+    //       let a = arr[i]
+    //       let b = arr[i][arr.length - 1 - i]
+    //       result = (result[0] + a && result [1] + b)
+    //     }
+    //     return Math.abs(result[0]-result[1])
+    //   }
+    //   diagonalDifference(
+    //    [1, 2, 3,],
+    //    [4, 5, 6,],
+    //    [9, 8, 9])
+
+
+    // как посчитать сумму элементов, для которых сумма цифр равна 4
+    // т.е для данного случая - 13 + 112 + 103
+
+    // const arr = ['a12b8', 'f4', 'k89', 's3c44', 'l9']
+    //   function returnSumm (arr) {
+    //     let sum = 0
+    //     arr.forEach ((elem) => {
+    //       let result = 0
+    //       // let str = elem.toString()
+    //       for (let i = 0; i < elem.length; i++) {
+    //         if (typeof elem[i] === 'number') {
+    //           result += Number(elem[i])
+    //         }
+    //       }
+    //       if (result === 4) {
+    //         sum += elem
+    //       }
+    //     })
+    //     return sum
+    //   }
+    //   console.log(returnSumm(arr))
+    // //
+    //
+    //   const arr = [13, 115, 112, 103, 24]
+    //     let result = 0
+    //     function sumArrayOfNumbers(numbersArray) {
+    //       for (let i =0; i < arr.length; i)
+    //
+    //     }
+
+
+    // let arr = [1, -2, -3, 4, 5, -6];
+    // let result = arr.reduce(function(sum, elem) {
+    //   if (elem >= 0) {
+    //     return sum + elem;
+    //   } else {
+    //     return sum;
+    //   }
+    // });
+    //
+    // console.log(result)
+
+
+    // const list = [
+    //   [1,2,3,4],
+    //   [2,3,4,5],
+    //   [6,7,8,
+    //     [
+    //       1,1,1,
+    //       [
+    //         2,2,2,8
+    //       ]
+    //     ]
+    //   ]
+    // ];
+    //
+    // function returnSum(arr) {
+    //   let summ = 0;
+    //   for(let i=0; i < arr.length; i++) {
+    //     if(typeof arr[i] === 'number'){
+    //       summ += arr[i];
+    //     }
+    //     if(typeof arr[i] === 'object' && Array.isArray(arr[i])){
+    //       summ += returnSum(arr[i])
+    //     }
+    //   };
+    //   return summ;
+    // }
+    // console.log("----!!--result----", returnSum(list));
+    // console.log(list[2][3][3][3])
+
+
+    // const transpose = (matrix) => {
+    //     let [row] = matrix
+    //     return row.map((value, column) => matrix.map(row => row[column]))
+    // }
+    //
+    // console.log(transpose)
+    //
+    // const matrix = [
+    //     [1,3,4,5],
+    //     [2,4,5,2]
+    // ]
+
+
+    // const arr = [
+    //     [1,3,4,5],
+    //     [2,4,5,2],
+    //     [3,6,8,7]
+    // ]
+    // function getCustomSet(arr) {
+    //     let result = []
+    //       for (let i = 0; i < arr[0].length; i++) {
+    //           const example = []
+    //           for (let j = 0; j < arr.length; j++) {
+    //               example.push(arr[j][i])
+    //           }
+    //           result.push(example)
+    //       }
+    //   return result
+    // }
+    // console.log(getCustomSet(arr))
+
+
+    // поменять элементы матрицы относительно диагонали
+    //   const matrix = [
+    //       [1,2,3],
+    //       [3,4,5],
+    //       [6,7,8]
+    //   ]
+    //   // let x = [matrix[0][1], matrix[1][0]]
+    //   // let y = [matrix[1][2], matrix[2][1]]
+    //   // let z = [matrix[0][2], matrix[2][0]]
+    //   function getNewMatrix (matrix) {
+    //       let processedRow = []
+    //       for (let i = 0; i < matrix.length; i++) {
+    //           for (let j = 0; j < matrix.length; j++) {
+    //               if (!processedRow.includes(j)){
+    //                   let temp = matrix[i][j]
+    //                   matrix[i][j] = matrix[j][i]
+    //                   matrix[j][i] = temp
+    //               }
+    //           }
+    //           processedRow.push(i)
+    //       }
+    //       return matrix
+    //   }
+    // console.log(getNewMatrix(matrix))
+
+
+    // let arr = [];
+    //
+    // for (let i = 2; i < 100; i++) {arr[i] = true;}
+    //
+    // let p = 2;
+    // do {
+    //
+    //     for (i = 2 * p; i < 100; i += p) {arr[i] = false;}
+    //
+    //     for (i = p + 1; i < 100; i++) {
+    //         if (arr[i]) break;
+    //     }
+    //     p = i;
+    // } while (p * p < 100); // шаг 5
+    //
+    // // Вычисление
+    // let sum = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i]) {sum += i;}
+    // }
+    // alert(sum)
+
+
+    // решето Эратосфена
+    // function getPrimes(num) {
+    //     const seive = []
+    //     const primes = []
+    //     for (let i = 2; i <= num; i++) {
+    //         if (!seive[i]) {
+    //             primes.push(i)
+    //             for (let j = i * 2; j <= num; j += i) {
+    //                 seive[j] = true
+    //             }
+    //         }
+    //     }
+    //     return primes
+    // }
+
+    // console.log(getPrimes(1000))
+
+
+    // Отсортировать массив - все элементы на четных местах сортируем по возврастанию, все на нечетных - по убыванию
+    // expected->[1,8,2,6,3,4,5,2,7,1]
+
+    // const arr = [1,2,3,1,2,4,5,8,7,6]
+    // function getEvenPosition(num){
+    //     return num % 2 === 0;
+    // }
+    // function getSort (arr) {
+    //     let result = []
+    //     let odd = []
+    //     let even = []
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (!getEvenPosition(i+1)) {
+    //             odd.push(arr[i])
+    //         }
+    //         if (getEvenPosition(i+1)) {
+    //             even.push(arr[i])
+    //         }
+    //     }
+    //     for(let i = 0; i < even.length; i++){
+    //         for(let j = 0; j < ( even.length - i -1 ); j++){
+    //             if(even[j] > even[j+1]){
+    //                 let temp = even[j]
+    //                 even[j] = even[j + 1]
+    //                 even[j+1] = temp
+    //             }
+    //         }
+    //     }
+    //     for(let i = 0; i < odd.length; i++){
+    //         for(let j = 0; j < ( odd.length - i -1 ); j++){
+    //             if(odd[j] < odd[j+1]){
+    //                 let temp = odd[j]
+    //                 odd[j] = odd[j + 1]
+    //                 odd[j+1] = temp
+    //             }
+    //         }
+    //     }
+    //     let result = []
+    //     for (let i = 0; i < even.length; i++) {
+    //         result.push(odd[i])
+    //         result.push(even[i])
+    //     }
+    // arr [1,2,3]
+    // even [2]
+    // odd [3,1]
+    // result [2,3]
+    //     if (odd.length > even.length) {
+    //         result.push(odd[odd.length-1])
+    //
+    //     }
+    //     return result
+    // }
+    // console.log(getSort(arr))
+
+
+    // Поменять местами строки и столбцы таблицы (делали ранее)
+    // по при условии что в каждой строке может быть разное кол-во столбцов
+
+
+    // const list = [
+    //     [3,5,6,7,3,4,5],
+    //     [6,5,7,5,4],
+    //     [5,6,4,8,6,2,4,2]
+    // ]
+    // function sortedList (list) {
+    //     let max = 0
+    //     let result = []
+    //     for (let i =0; i < list.length; i++ ) {
+    //         result.push([])
+    //         if (list[i].length > max) {
+    //             max = list[i].length
+    //             console.log (max)
+    //         }
+    //     }
+    //     for (let i = 0; i < max; i++) {
+    //         for (let j = 0; j < list.length; j++) {
+    //             if (list[j].length > i) {
+    //                 result[j].push (list[j][i])
+    //             }
+    //         }
+    //     }
+    //     console.log(result)
+    //     return result
+    // }
+    // sortedList(list)
+
+
+    // написать функцию,на вход получает одномерный массив чисел
+    // должна вернуть
+    // - количество простых чисел в массиве (помним про решето Эратосфера)
+    // - сумму простых чисел
+
+    // const list = [2, 3, 56, 675, 34, 23, 342, 45678, 12397, 79, 77, 75, 81]
+    //
+    // function getPrimesSum(list) {
+    //     let max = getMax(list)
+    //     let primes = getPrimes(max)
+    //     let sum = 0
+    //     let count = 0
+    //     for (let i = 0; i < list.length; i++) {
+    //         if (primes.includes(list[i])) {
+    //             sum += list[i]
+    //             count++
+    //         }
+    //     }
+    //     return {
+    //         sum,
+    //         count
+    //     }
+    // }
+    // console.log(getPrimesSum(list))
+
+
+    // Отсортировать массив по принципу
+    // Отриц число
+    // Полож число
+    // result - -1,2,-4,2,-7,5,6
+
+
+    // const list = [6,-4,5,2,-7,2,-1]
+    // function getSortedList (list) {
+    //     let result = []
+    //     let neg = []
+    //     let pos = []
+    //     for (let i=0; i<list.length; i++) {
+    //         if (list[i] < 0) {
+    //             neg.push(list[i])
+    //         } else {
+    //             pos.push(list[i])
+    //         }
+    //     }
+    //     // neg = [-4,-7,-1]
+    //     // pos = [6,5,2,2]
+    //     // result = [-4,6]
+    //     if (pos.length > neg.length) {
+    //         for (let i=0; i < neg.length; i++) {
+    //             result.push(neg[i])
+    //             result.push(pos[i])
+    //         }
+    //         for (let j =0; j<pos.length; j++) {
+    //             result.push(pos[j])
+    //         }
+    //     }
+    //     return {
+    //         neg,
+    //         pos,
+    //         result
+    //     }
+    //
+    // }
+    // console.log(getSortedList(list))
+
+    //  for (let i=0; i < neg.length; i+=2) {
+    //
+    //         }
+    // go from bottom to top
+
+    // for (let i=neg.length; i>0; i-=4) {
+    //
+    // }
+    //go from top to bottom
+    // let a = 2+2
+    // switch (a){
+    //     case 60:
+    //         console.log ('v60')
+    //         break
+    //     case 4:
+    //         console.log('v4')
+    //         break
+    //     case 2:
+    //         console.log('v2')
+    //         break
+    //     default:
+    //         console.log('wrong')
+    // }
+
+
+
+
+
+
+    // if ((2>1 || 3>4) && 1>2) {
+    //     console.log("My name is Arina")
+    // }
+//     priority of operation (to read)
+
+
+
+
+// на вход получвет массив
+// возвращает
+// сортированый массив только положительных чисел умноженных на 2
+
+// const list = [6,-4,5,2,-7,2,-1]
+//     const result = list.filter((item) => {
+//         return item > 0
+//     }).map((elem) => {
+//         return elem * 2
+//     })
+// console.log(result)
+
+    const list = [6,-4,5,2,-7,2,-1]
+    console.log(list.filter(item => item > 0).map(elem => elem * 2))
+
+
+
+
+    // const src = [
+    //     {gender: 'F', f_name: 'Anna', l_name: 'Ivanova', passport: 'GR234fdffd343' },
+    //     {gender: 'M', f_name: 'Ivan', l_name: 'Petrov', passport: 'RUdfgegdbvbvfredgg' },
+    //     {gender: 'F', f_name: 'Sveta', l_name: 'Durova', passport: 'BL23423423' },
+    //     {gender: 'F', f_name: 'Jane', l_name: 'Lapus', passport: 'FR234234' },
+    //     {gender: 'M', f_name: 'Cloud', l_name: 'Farell', passport: 'FR235435234234' },
+    //     {gender: 'F', f_name: 'Janette', l_name: 'Mane', passport: 'FRdfgfg34545' },
+    // ]
+    // const ListFr = src.filter(function(item) {
+    //     return item.passport === "FR"
+    // }).map(function (item) {
+    //     return item.f_name
+    // })
+    // console.log (ListFr)
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
